@@ -11,8 +11,8 @@ export default function Navbar ({ onColorChange }: ColorPickerProps){
     ]
 
     return(
-        <section className="space-y-4">
-            <div className="grid grid-cols-5 gap-2 w-64 h-64">
+        <section className="space-y-2">
+            <div className="grid grid-cols-5 gap-2 w-80 h-65">
                 {pastelColors.map((color) => (
                 <button
                     key={color.value}
