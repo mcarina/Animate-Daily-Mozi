@@ -18,9 +18,10 @@ export default function CommentBox({ comment, setComment }:CommentBoxProps){
     return (
         <div className="space-y-2">
         {!isOpen ? (
-            <button onClick={() => setIsOpen(true)} className="text-primary hover:underline text-sm font-medium">
+            <Button variant="ghost" onClick={() => setIsOpen(true)} 
+            className="w-full text-primary hover:text-primary/80">
             Alguma resposta?
-            </button>
+            </Button>
         ) : (
             <form onSubmit={handleSubmit} className="space-y-4 w-80">
             <Textarea 
@@ -31,18 +32,14 @@ export default function CommentBox({ comment, setComment }:CommentBoxProps){
                 autoFocus/>
 
             <div className="flex gap-2 justify-end">
-                <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => {
-                    setTempComment(comment)
+                <Button type="button" variant="outline" size="sm"
+                onClick={() => { setTempComment(comment)
                     setIsOpen(false)
                 }}
                 >
                 Cancelar
                 </Button>
-                <Button type="submit" size="sm">
+                <Button type="submit" size="sm" variant="outline">
                 Salvar
                 </Button>
             </div>

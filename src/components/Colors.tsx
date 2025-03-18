@@ -1,6 +1,6 @@
 "use client"
 
-export default function Navbar ({ onColorChange }: ColorPickerProps){
+export default function Colors ({ onColorChange }: ColorPickerProps){
 
     const pastelColors = [
         { value: "#f8edeb" },
@@ -12,7 +12,7 @@ export default function Navbar ({ onColorChange }: ColorPickerProps){
 
     return(
         <section className="space-y-2">
-            <div className="grid grid-cols-5 gap-2 w-80 h-65">
+            <div className="grid grid-cols-5 gap-1 w-80 h-65">
                 {pastelColors.map((color) => (
                 <button
                     key={color.value}
