@@ -5,8 +5,8 @@ import Colors from "@/components/Colors"
 import CommentBox from "@/components/commentBox"
 
 const page = () => {
-  const [backgroundColor, setBackgroundColor] = useState("#fffff")
-  const [comment, setComment] = useState("")
+  const [backgroundColor, setBackgroundColor] = useState("#fffff");
+  const [comment, setComment] = useState("");
   
   return (
     <main
